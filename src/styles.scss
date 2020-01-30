@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  	background-color: #0c1b1c;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+app-root {
+  padding-top: 3rem;
+  position: relative;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: all linear 200ms;
+}
+
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 10rem;
+}
+
+.my-nav-container {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+}
+
+p.white {
+  color: white;
+}
+
+p.desc {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+h1.display-4 {
+  color: white;
+}

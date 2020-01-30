@@ -1,0 +1,35 @@
+.text-muted{
+  color: #c1c5ca!important;
+}
+.card{
+  // display: block;
+  // transition: all linear 300ms;
+  overflow: hidden;
+  & h5.card-title{
+    font-family: 'Exo', sans-serif;
+  }
+  & h6.card-subtitle{
+    font-family: 'Archivo Black', sans-serif;
+  }
+  & p.card-text{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+  }
+  &.show{
+    // transition: all linear 300ms;
+    height: auto;
+  }
+  
+  &.collapse{
+    display: block;
+    // transition: all linear 300ms;
+    height: 180px;
+    & img{
+      position: relative;
+      top: calc(50% - calc(100% - 30px));
+    }
+    & .card-img-overlay{
+      // display: none;
+    }
+  }
+}
