@@ -9,6 +9,7 @@ import { QualificationsComponent } from './qualifications/qualifications.compone
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ResizeDirective } from './resize.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     QualificationsComponent,
     ExperienceComponent,
     ProjectsComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    ResizeDirective
   ],
   imports: [
     BrowserModule,
