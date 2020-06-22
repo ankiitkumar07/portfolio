@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,9 +10,13 @@ import { QualificationsComponent } from './qualifications/qualifications.compone
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
-import { ResizeDirective } from './resize.directive';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     IntroComponent,
@@ -19,12 +24,7 @@ import { ResizeDirective } from './resize.directive';
     QualificationsComponent,
     ExperienceComponent,
     ProjectsComponent,
-    HobbiesComponent,
-    ResizeDirective
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+    HobbiesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

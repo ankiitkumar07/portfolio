@@ -1,14 +1,6 @@
-<my-intro></my-intro>
-
-<my-objective></my-objective>
-
-<my-qualifications></my-qualifications>
-
-<my-experience></my-experience>
-
-<my-projects></my-projects>
-
-<my-hobbies></my-hobbies>
+<main [@routeAnimation]="prepareRoute(myOutlet)" class="content">
+  <router-outlet #myOutlet="outlet"></router-outlet>
+</main>
 
 <div class="my-nav-container">
   <div class="container">
@@ -16,44 +8,44 @@
       <div class="col-12 text-center">
         <div class="btn-group" role="group" aria-label="Basic example">
           <button
-            type="button"
+            type="link"
             class="btn btn-secondary"
-            onclick='show("intro")'
+            [routerLink]="['']"
           >
             Intro
           </button>
           <button
-            type="button"
+            type="link"
             class="btn btn-secondary"
-            onclick='show("career")'
+            [routerLink]="['/career-objective']"
           >
             Career Objective
           </button>
           <button
-            type="button"
+            type="link"
             class="btn btn-secondary"
-            onclick='show("education")'
-          >
-            Education Details
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            onclick='show("experience")'
+            [routerLink]="['/experience']"
           >
             Technical Experience
           </button>
           <button
-            type="button"
+            type="link"
             class="btn btn-secondary"
-            onclick='show("projects")'
+            [routerLink]="['/projects']"
           >
             Projects Undertaken
           </button>
           <button
-            type="button"
+            type="link"
             class="btn btn-secondary"
-            onclick='show("hobbies")'
+            [routerLink]="['/education']"
+          >
+            Education Details
+          </button>
+          <button
+            type="link"
+            class="btn btn-secondary"
+            [routerLink]="['/hobbies']"
           >
             Hobbies and Interests
           </button>

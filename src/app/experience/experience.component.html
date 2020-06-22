@@ -2,30 +2,22 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="display-4">Experience Details</h1>
+        <h1 class="display-4">Work Experience</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-6">
-        <div class="card bg-dark collapse">
-          <img
-            src="https://images.pexels.com/photos/821651/pexels-photo-821651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            class="card-img"
-            alt="..."
-          />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Organisation Name</h5>
+    <div class="row justify-content-center mt-4">
+    	<div class="col-1">
+      		<div class="line" #line>
+        		<div class="circle" #circle></div>
+        		<div class="circle" #circle></div>
           </div>
-          <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">Role</h6>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quia doloremque perferendis delectus necessitatibus hic eius magni aliquam quibusdam alias veritatis quae corrupti natus recusandae ad, saepe id ut distinctio!
-            </p>
-            <h6 class="card-subtitle mb-2 text-muted">Resposibilities</h6>
-            <p class="card-text">Last updated 3 mins ago</p>
-          </div>
+    	</div>
+    	<div class="col-6" >
+        <div class="experienceBox" *ngFor="let experience of experience" #exp>
+          <h3>{{experience.title}}</h3>
+          <p>{{experience.resposibity}}</p>
         </div>
-      </div>
+    	</div>
     </div>
   </div>
 </section>

@@ -1,35 +1,60 @@
+$topOne: 10%;
+$topTwo: 60%;
+$expBoxHeight: 9rem;
+
+
 .text-muted{
   color: #c1c5ca!important;
 }
-.card{
-  // display: block;
-  // transition: all linear 300ms;
-  overflow: hidden;
-  & h5.card-title{
-    font-family: 'Exo', sans-serif;
-  }
-  & h6.card-subtitle{
-    font-family: 'Archivo Black', sans-serif;
-  }
-  & p.card-text{
-    font-family: 'Source Sans Pro', sans-serif;
+
+.line{
+  background-color: white;
+  border-radius: 10px;
+  width: 0.2rem;
+  height: 0rem;
+  display: inline-block;
+  transition: all 500ms ease-in;
+}
+.col-1{
+  max-width: max-content;
+}
+.experienceBox
+{
+  // width: min-content;
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  left: 30px;
+  opacity: 0;
+  transition: all 500ms ease-in;
+  & p{
     color: white;
   }
-  &.show{
-    // transition: all linear 300ms;
-    height: auto;
+  &:nth-child(1){
+    position: absolute;
+    top: #{$topOne};
   }
-  
-  &.collapse{
-    display: block;
-    // transition: all linear 300ms;
-    height: 180px;
-    & img{
-      position: relative;
-      top: calc(50% - calc(100% - 30px));
-    }
-    & .card-img-overlay{
-      // display: none;
-    }
+  &:nth-child(2){
+    position: absolute;
+    top: #{$topTwo};
+  }
+}
+
+.circle{
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 500ms ease-in;
+  background-color: white;
+  &:nth-child(1){
+    position: absolute;
+    top: calc( #{$topOne} + #{$expBoxHeight}/2 - 5px );
+    left: 10px;
+  }
+  &:nth-child(2){
+    position: absolute;
+    top: calc( #{$topTwo} + #{$expBoxHeight}/2 - 5px );
+    left: 10px;
   }
 }
