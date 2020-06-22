@@ -1,17 +1,19 @@
-import { Component, OnInit, AfterViewInit, ChangeDetectorRef, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { lineExpandAnimation } from './line-expand-animation';
+import { Component, OnInit, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
+// import { lineExpandAnimation } from './line-expand-animation';
+import { CustomAnimationService } from '../customAnimation';
 
 @Component({
   selector: 'my-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
-  animations: [lineExpandAnimation]
+  providers: [CustomAnimationService]
 })
-export class ExperienceComponent implements OnInit, AfterViewInit {
+export class ExperienceComponent implements OnInit {
 
   @ViewChild('line') line : ElementRef;
   @ViewChildren('circle') circles : QueryList<ElementRef>;
   @ViewChildren('exp') exp : QueryList<ElementRef>;
+  @ViewChild('heading') heading : ElementRef;
 
   experience : any = [{
     "title": "TechMahindra",
@@ -26,17 +28,15 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
                     "aperiam enim debitis praesentium atque tempora laborum ratione quisquam excepturi eveniet!"
   }];
 
-  constructor(private cdRef: ChangeDetectorRef) { }
+  constructor(private animation: CustomAnimationService) { }
 
   ngOnInit(){
-  }
-
-  ngAfterViewInit(){
-    this.cdRef.detectChanges();
-    console.log("ngAfterViewInit");
     setTimeout(() => {
-      this.animateLine();
+      this.animation.animateHeading(this.heading);
     }, 1000);
+    setTimeout(() => {
+      this.animateLine()
+    }, 1500);
   }
 
   animateLine(){
