@@ -8,13 +8,14 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class IntroComponent implements OnInit{
 	@ViewChild('intro') intro : ElementRef;
 	aText = [
-	"I am a Full-Stack Web Developer, currently working for Tech Mahindra. " + 
+	"I am a Full-Stack Web Developer, currently working for Tech Mahindra. " ,
 	"For a long time now, I have been obsessed with " + 
 	"Web Desgining and love the way how different components and modules intregate with each others" + 
-	" and create wonders." 
+	" and create wonders." ,
+	""
 	];
 
-	iSpeed : number = 50; // time delay of print out
+	iSpeed : number = 10; // time delay of print out
 	iIndex : number = 0; // start printing array at this posision
 	iArrLength : number = this.aText[0].length; // the length of the text array
 	iScrollAt : number = 20; // start scrolling up at this many lines
@@ -38,7 +39,7 @@ export class IntroComponent implements OnInit{
 	 this.iRow = Math.max(0, this.iIndex - this.iScrollAt);
 	 
 	 while ( this.iRow < this.iIndex ) {
-	  this.sContents += this.aText[this.iRow++] + '<br />';
+	  this.sContents += '<p>' + this.aText[this.iRow++] + '</p>';
 	 }
 	 this.intro.nativeElement.innerHTML = this.sContents + this.aText[this.iIndex].substring(0, this.iTextPos) + "_";
 	 if ( this.iTextPos++ == this.iArrLength ) {

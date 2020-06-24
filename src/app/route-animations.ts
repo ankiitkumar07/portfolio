@@ -46,5 +46,14 @@ export const myAnimation =
   						query(':leave', [animate('1s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(-100%)', opacity: 0}))], {optional: true}),
   						query(':enter', [animate('1s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateX(100%)'}))])
   					])
-  				])
+  				]),
+        transition('* => fadeOut', [
+          style({ height: '!' }),
+          query(':enter', style({ opacity: 1})),
+          query(':enter, :leave', style({ opacity: 1 }), {optional: true}),
+          group([
+              query(':leave', [animate('1s cubic-bezier(.35, 0, .25, 1)', style({ opacity: 0 }))], {optional: true}),
+              query(':enter', [animate('1s cubic-bezier(.35, 0, .25, 1)', style({ opacity: 1 }))])
+            ])
+          ])
   		])

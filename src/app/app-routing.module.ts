@@ -15,7 +15,7 @@ const routes: Routes = [
 	{ path: 'experience', component: ExperienceComponent, data: { animation: 'slideDown' } },
 	{ path: 'education', component: QualificationsComponent, data: { animation: 'slideLeft' } },
 	{ path: 'projects', component: ProjectsComponent, data: { animation: 'slideRight' } },
-	{ path: 'hobbies', component: HobbiesComponent, data: { animation: 'FadeOut' } }
+	{ path: 'hobbies', component: HobbiesComponent, data: { animation: 'fadeOut' } }
 ];
 
 @NgModule({
