@@ -13,12 +13,19 @@ export class ObjectiveComponent implements OnInit {
 
   public skillChartOptions = {
     scaleShowVerticalLines : true,
-    responsive : true
+    responsive : true,
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
   };
-  public skillChartLabels = ['Java 9', 'Angular 8', 'Spring Boot', 'HTML 5 / CSS 3', 'Ruby on Rails'];
+  public skillChartLabels = [ 'Java 9', 'Angular 8', 'Spring Boot', 'HTML 5 / CSS 3', 'Ruby on Rails'];
   public skillChartType = 'bar';
   public skillChartLegend = true;
-  public skillChartData = [{data: [20, 30, 40, 50, 60], label: 'Skill Level'}];
+  public skillChartData = [{data: [ 73, 51, 60, 90, 75, 100], label: 'Skill Level'}];
 
 
 
