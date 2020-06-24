@@ -11,7 +11,7 @@ import { QualificationsComponent } from './qualifications/qualifications.compone
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, data: { animation: 'zoomOut'} },
-	{ path: 'career-objective', component: ObjectiveComponent, data: { animation: 'slideUp' }},
+	{ path: 'skills', component: ObjectiveComponent, data: { animation: 'slideUp' }},
 	{ path: 'experience', component: ExperienceComponent, data: { animation: 'slideDown' } },
 	{ path: 'education', component: QualificationsComponent, data: { animation: 'slideLeft' } },
 	{ path: 'projects', component: ProjectsComponent, data: { animation: 'slideRight' } },

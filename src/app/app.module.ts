@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { ChartsModule } from 'ng2-charts';
+ 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 import { ObjectiveComponent } from './objective/objective.component';
@@ -15,7 +18,8 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   declarations: [
     AppComponent,
