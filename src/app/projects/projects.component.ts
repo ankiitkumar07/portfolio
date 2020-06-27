@@ -13,22 +13,22 @@ export class ProjectsComponent implements OnInit {
   @ViewChildren('cards') cards : QueryList<ElementRef>;
   projects = [{
     "title" : "KumarsJournal",
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam laboriosam praesentium.",
+    "description" : "Website for Online travel blog.",
     "link" : "kumarsjournal.herokuapp.com",
     "imagePath" : "",
     "color" : "a2de96"
   },
   {
     "title": "Bookstore",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta earum culpa repellat?",
+    "description": "An online bookstore where users can get recommendations from thier fellow book lovers.",
     "link": "google.com",
     "imagePath": "",
     "color" : "f37121"
   },
   {
-    "title": "Bookstore",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta earum culpa repellat?",
-    "link": "google.com",
+    "title": "Timeline",
+    "description": "JavaScript based timeline to show various chronology based events.",
+    "link": "",
     "imagePath": "",
     "color" : "f3c623"
   }];

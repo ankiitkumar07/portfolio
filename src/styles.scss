@@ -1,3 +1,5 @@
+@import 'material-icons/iconfont/material-icons.scss';
+
 body{
   	background-color: #0c1b1c;
 	//overflow-x: hidden;
@@ -47,7 +49,10 @@ h1.display-4 {
 }
 .heading-wrapper{
   padding: 0.2rem 1rem;
-  border-bottom: 0.7rem solid white;
+  border-bottom: 0.2rem solid white;
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-radius: 2%;
   display: inline;
   margin-bottom: 1rem;
   overflow: hidden;

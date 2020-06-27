@@ -10,22 +10,27 @@ import { CustomAnimationService } from '../customAnimation';
 })
 export class ExperienceComponent implements OnInit {
 
-  @ViewChild('line') line : ElementRef;
-  @ViewChildren('circle') circles : QueryList<ElementRef>;
-  @ViewChildren('exp') exp : QueryList<ElementRef>;
+  // @ViewChildren('line') line : QueryList<ElementRef>;
+  // @ViewChildren('circle') circles : QueryList<ElementRef>;
+  @ViewChild('col1') col1 : ElementRef;
+  @ViewChildren('exp') exp : QueryList<ElementRef<HTMLElement>>;
   @ViewChild('heading') heading : ElementRef;
 
   experience : any = [{
     "title": "TechMahindra",
-    "resposibity": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae," +
-                    "similique, sit! Eligendi dolore corporis, veritatis totam sit repudiandae temporibus" +
-                    "aperiam enim debitis praesentium atque tempora laborum ratione quisquam excepturi eveniet!"
+    "resposibity": "<ul><li>I joined TechMahindra as a fresher as I entered the IT industry for the first time to work as a professional.</li>"+
+                   "<li>I have been working on API development and Automation projects.</li>" + 
+                   "<li>I have worked on languages like Java 9 and frameworks like Spring Boot and Angular.</li>" + 
+                   "</ul>"
   },
   {
     "title" : "KumarsJournal",
-    "resposibity" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae," +
-                    "similique, sit! Eligendi dolore corporis, veritatis totam sit repudiandae temporibus" +
-                    "aperiam enim debitis praesentium atque tempora laborum ratione quisquam excepturi eveniet!"
+    "resposibity" : "<ul>" + 
+                    "<li>Worked as a Full Stack freelancer to build a website</li>" + 
+                    "<li>Designed and developed the website's front end using HTML5, CSS3, and JavaScript.</li>" +
+                    "<li>Used Ruby on Rails Web Application Development Framework for backend</li>" +
+                    "<li>Used PostgresSQL as the Database.</li>" +
+                    "</ul>"
   }];
 
   constructor(private animation: CustomAnimationService) { }
@@ -35,25 +40,56 @@ export class ExperienceComponent implements OnInit {
       this.animation.animateHeading(this.heading);
     }, 1000);
     setTimeout(() => {
-      this.animateLine()
-    }, 1500);
+      this.setPosition()
+    }, 1000);
   }
 
-  animateLine(){
-    this.line.nativeElement.style.height = '30rem';
+  createElements(){
+    console.log("create Elements function");
+  }
+
+  setPosition(){
+    let circles = <HTMLElement[]><any>document.getElementsByClassName('circle'); 
+    // let lines = <HTMLElement[]><any>document.getElementsByClassName('line');
+    let boxes = <HTMLElement[]><any>document.getElementsByClassName('experience-box');
+    let i;    
+    for(i = 0; i < boxes.length; i++){
+      circles[i].style.top = (boxes[i].offsetTop + 20) + 'px';
+      // lines[i].style.top = (circles[0].offsetTop + circles[0].offsetHeight + 10) + 'px';
+    }
     setTimeout(() => {
-      this.circles.forEach(function (item) {
-        console.log(item.nativeElement);
-        item.nativeElement.style.opacity = 1;
-        item.nativeElement.style.transform = 'scale(1.1)';
-      });
-    }, 500);
-    setTimeout(() => {
-      this.exp.forEach(function (item) {
-        item.nativeElement.style.left = '20px';
-        item.nativeElement.style.opacity = 1;
-      })
-    }, 800);
-    console.log(this.line.nativeElement);
+      this.animateScene()
+    }, 1000);
+  }
+
+  animateScene(){
+    let circles = <HTMLElement[]><any>document.getElementsByClassName('circle'); 
+    let lines = <HTMLElement[]><any>document.getElementsByClassName('line');
+    let boxes = <HTMLElement[]><any>document.getElementsByClassName('experience-box');
+    let i = 0;
+    // let start = Date.now();
+    // let timer = setInterval(function(){
+    //   let timePassed = Date.now() - start;
+    //   if (timePassed >= (boxes.length*3000)) {
+    //     clearInterval(timer); // finish the animation after 2 seconds
+    //     return;
+    //   } 
+    // }, 3000);
+    for(i; i< boxes.length; i++){
+      this.showBubble(circles[i]);
+      this.showBox(boxes[i]);
+      if(i < lines.length - 1){
+        this.drawLine(lines[i], circles[1].offsetTop);
+      }
+    }
+  }
+  showBubble(el : HTMLElement){
+     el.style.opacity = '1';
+  }
+  showBox(el : HTMLElement){
+    el.style.opacity = '1';
+  }
+  drawLine(el : HTMLElement, height: number){
+    el.style.height = height + 'px';
   }
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
 	{ path: '', component: IntroComponent, data: { animation: 'zoomOut'} },
 	{ path: 'skills', component: ObjectiveComponent, data: { animation: 'slideUp' }},
 	{ path: 'experience', component: ExperienceComponent, data: { animation: 'slideDown' } },
-	{ path: 'education', component: QualificationsComponent, data: { animation: 'slideLeft' } },
+	// { path: 'education', component: QualificationsComponent, data: { animation: 'slideLeft' } },
 	{ path: 'projects', component: ProjectsComponent, data: { animation: 'slideRight' } },
 	{ path: 'hobbies', component: HobbiesComponent, data: { animation: 'fadeOut' } }
 ];
