@@ -1,20 +1,15 @@
 @import 'material-icons/iconfont/material-icons.scss';
 
 body{
-  	background-color: #0c1b1c;
-	//overflow-x: hidden;
-	overflow-y: auto;
-      display: flex;
+    background-color: #0c1b1c;
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
-    overflow-x: hidden; 
-    // min-height: 100vh;
+    overflow-x: hidden;
 }
 
 app-root {
-  
-  //position: relative;
   height: 100%;
-  // width: max-content;
 }
 
 
@@ -28,7 +23,10 @@ section {
 
 .my-nav-container {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0rem;
+  padding: 0.7rem 0;
+  background-color: #0c1b1c;
+  box-shadow: 0px -1px 13px black;
   width: 100%;
 }
 

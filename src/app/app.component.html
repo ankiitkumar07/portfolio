@@ -5,10 +5,10 @@
 <div class="my-nav-container">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-1">
-        
+      <div class="col-1 justify-content-center d-flex">
+        <button type="button" class="btn grey"><span class="material-icons">link</span></button>
       </div>
-      <div class="col-10 text-center">
+      <div class="col-10 d-flex align-items-center justify-content-center">
         <div class="btn-group" role="group" aria-label="Basic example">
           <button
             type="link"
@@ -54,9 +54,21 @@
           </button>
         </div>
       </div>
-      <div class="col-1">
-        <button class="btn btn-primary grey"><span class="material-icons">chat</span></button>
+      <div class="col-1 justify-content-center d-flex">
+        <button type="button" class="btn grey" (click)="openModal(modal)"><span class="material-icons">chat</span></button>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #modal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Contact Ankit Kumar</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-contact-modal></app-contact-modal>
+  </div>
+</ng-template>

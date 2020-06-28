@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// import { trigger, transition, style, query, group,animate } from '@angular/animations';
 import { myAnimation } from './route-animations';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,22 @@ import { myAnimation } from './route-animations';
 })
 export class AppComponent {
   title = 'portfolio';
+  modalRef: BsModalRef;
+  constructor(private modalService: BsModalService){}
 
   prepareRoute(outlet: RouterOutlet){
   	return outlet.activatedRouteData['animation'];
   }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {
+       class: 'modal-lg modal-dialog-centered',
+       ignoreBackdropClick: true, 
+       keyboard: false
+    });
+  }
+
+  
+
+
 }

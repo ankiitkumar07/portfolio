@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ChartsModule } from 'ng2-charts';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ReactiveFormsModule, FormsModule, FormControl } from '@angular/forms';  
  
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -13,13 +15,17 @@ import { QualificationsComponent } from './qualifications/qualifications.compone
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    ModalModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -28,9 +34,10 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     QualificationsComponent,
     ExperienceComponent,
     ProjectsComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    ModalComponent
   ],
-  providers: [],
+  providers: [FormControl],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
