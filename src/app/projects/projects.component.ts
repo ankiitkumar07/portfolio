@@ -11,6 +11,8 @@ export class ProjectsComponent implements OnInit {
 
 	@ViewChild('heading') heading : ElementRef;
   @ViewChildren('cards') cards : QueryList<ElementRef>;
+  width = window.innerWidth;
+
   projects = [{
     "title" : "KumarsJournal",
     "description" : "Website for Online travel blog.",

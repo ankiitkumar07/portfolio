@@ -15,7 +15,7 @@ $expBoxHeight: 9rem;
   display: inline-block;
   transition: all 500ms ease-in;
 }
-.col-1{
+.col-md-1{
   max-width: max-content;
 }
 :host ::ng-deep .circle{
@@ -73,4 +73,27 @@ $expBoxHeight: 9rem;
     letter-spacing: 1px;
     color: white;
   }
+}
+
+
+@media only screen and (max-width: 500px){
+
+  #markup{
+    display: none;
+  }
+  .experience-box{
+    padding: 0.7rem 0.1rem;
+    margin-bottom: 4rem;
+    left: 0;
+    &:before{
+      display: none;
+    }
+    & h3{
+      font-size: 1.75rem;
+    }
+    & p{
+      font-size: 0.8rem;
+    }
+  }
+
 }

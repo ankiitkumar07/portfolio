@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-    	<div [ngClass]="'col-' + (projects.length >= 3 ? 4 : 6)" *ngFor="let item of projects">
+    	<div [ngClass]="'col-' + (width >= 500 ? ('md-' + (projects.length >= 3 ? 4 : 6)) : 'sm-12')" *ngFor="let item of projects">
     		<div class="card"
     		[ngStyle]="{'background-color' : '#'+item.color}"
     		(mouseenter)="over($event)" (mouseleave)="out($event)" #cards>

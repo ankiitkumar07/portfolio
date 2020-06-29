@@ -71,3 +71,21 @@ router-outlet{
     display: block;
   } 
 }
+
+@media only screen and (max-width: 500px){
+
+  section{
+    padding: 12px 2px;
+  }
+  .disp-img.img-thumbnail{
+    max-width: 80%;
+  }
+  .display-3{
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .display-4{
+    font-size: 2rem;
+  }
+
+}

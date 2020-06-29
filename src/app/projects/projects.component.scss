@@ -32,6 +32,15 @@
     }
 }
 
-.col-4{
+.col-md-4{
 	padding: 0;
+}
+
+@media only screen and ( max-width: 500px ){
+    .card{
+        padding: 0.3rem 0.8rem;
+        &:last-child{
+            margin-bottom: 5rem;
+        }
+    }
 }

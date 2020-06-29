@@ -43,3 +43,20 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 500px){
+	.ibox{
+		width: 150px;
+    	height: 150px;
+    	&:nth-child(odd){
+    		right: -56vw;
+    	}
+    	& h1{
+    		font-size: 1.4rem;
+    		top: 35% !important; 
+    		& span{
+    			line-height: 1rem;
+    		}
+    	}
+	}
+}

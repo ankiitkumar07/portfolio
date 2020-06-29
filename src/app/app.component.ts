@@ -3,10 +3,23 @@ import { RouterOutlet } from '@angular/router';
 import { myAnimation } from './route-animations';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { combineLatest, Subscription } from 'rxjs';
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare,faGithub,
+         faInstagram,
+         faLinkedin 
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
+         faUser
+
+} from '@fortawesome/free-regular-svg-icons';
+import {
+         faLaptopCode,
+         faChartArea,
+         faProjectDiagram,
+         faBasketballBall
+
+} from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-root',
@@ -16,20 +29,59 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  width = window.innerWidth;
   
+  //icons
   fb = faFacebookSquare;
   git = faGithub;
   insta = faInstagram;
   linkedin = faLinkedin;
-  
-  modalRef: BsModalRef;
+  faUser = faUser;
+  faLaptopCode = faLaptopCode;
+  faProjectDiagram = faProjectDiagram;
+  faChartArea = faChartArea;
+  faBasketballBall = faBasketballBall;
 
-  stacked: boolean = true;
+  //navBar data 
+  buttonData = [{
+    'text': 'Intro',
+    'link': '/',
+    'icon': '<span class="material-icons">face</span>'
+  },
+  {
+    'text': 'Technical Experience',
+    'link': '/experience',
+    'icon': '<span class="material-icons">laptop</span>'
+  },
+  {
+    'text': 'Projects Undertaken',
+    'link': '/projects',
+    'icon': '<span class="material-icons">code</span>'
+  },
+  {
+    'text': 'Skills',
+    'link': '/skills',
+    'icon': '<span class="material-icons">insert_chart_outlined</span>'
+  },
+  {
+    'text': 'Hobbies and Interests',
+    'link': '/hobbies',
+    'icon': '<span class="material-icons">sports_basketball</span>'
+  }]
+  
+  
+
   constructor(private modalService: BsModalService){}
 
+
+  //Animation Route
   prepareRoute(outlet: RouterOutlet){
   	return outlet.activatedRouteData['animation'];
   }
+
+  //Modal 
+  modalRef: BsModalRef;
 
   openModal(template: TemplateRef<any>, $event) {
     let span = <HTMLElement>event.target;
@@ -42,6 +94,9 @@ export class AppComponent {
     });
   }
 
+  
+  //Buttons
+  stacked: boolean = true;
   btnStacked($event){
     console.log("hey");
     this.stacked === true ? this.stacked = false : this.stacked = true;
