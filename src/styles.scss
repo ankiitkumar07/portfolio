@@ -17,17 +17,15 @@ section {
   position: relative;
   padding: 5rem 10rem 1rem 10rem;
   background-color: #0c1b1c;
-  min-height: 100vh;
   min-width: 100vw;
 }
 
 .my-nav-container {
-  position: fixed;
-  bottom: 0rem;
   padding: 0.7rem 0;
   background-color: #0c1b1c;
   box-shadow: 0px -1px 13px black;
   width: 100%;
+  z-index: 99999;
 }
 
 p.white {

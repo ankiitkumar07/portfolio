@@ -1,16 +1,22 @@
+.min-height {
+  min-height: 50rem;
+}
+.display-3, .display-4 {
+  transition: all 500ms linear;
+}
 h1.display-4 {
   color: white;
 }
 
 .disp-img {
   background-color: transparent;
-  padding: 1.1rem;
-  border-radius: 131% 50% !important;
+  padding         : 1.1rem;
+  border-radius   : 131% 50% !important;
 }
 
 @media only screen and (max-width: 500px) {
-	p.desc{
-		font-size: 1rem;
-		letter-spacing: 0;
-	}
+  p.desc {
+    font-size     : 1rem;
+    letter-spacing: 0;
+  }
 }

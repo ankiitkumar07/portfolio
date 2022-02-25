@@ -16,22 +16,33 @@ export class ExperienceComponent implements OnInit {
   @ViewChildren('exp') exp : QueryList<ElementRef<HTMLElement>>;
   @ViewChild('heading') heading : ElementRef;
 
-  experience : any = [{
+  experience : any = [
+    {
+      "title" : "Filed",
+      "resposibity" : `<ul>
+                      <li>Worked as a Full Stack freelancer to build a website</li>
+                      <li>Designed and developed the website's front end using HTML5, CSS3, and JavaScript.</li>
+                      <li>Used Ruby on Rails Web Application Development Framework for backend</li>
+                      <li>Used PostgresSQL as the Database.</li>
+                      </ul>`
+    },
+    {
     "title": "TechMahindra",
-    "resposibity": "<ul><li>I joined TechMahindra as a fresher as I entered the IT industry for the first time to work as a professional.</li>"+
-                   "<li>I have been working on API development and Automation projects.</li>" + 
-                   "<li>I have worked on languages like Java 9 and frameworks like Spring Boot and Angular.</li>" + 
-                   "</ul>"
+    "resposibity": `<ul><li>I joined TechMahindra as a fresher as I entered the IT industry for the first time to work as a professional.</li>
+                   <li>I have been working on API development and Automation projects.</li>
+                   <li>I have worked on languages like Java 9 and frameworks like Spring Boot and Angular.</li>
+                   </ul>`
   },
   {
     "title" : "KumarsJournal",
-    "resposibity" : "<ul>" + 
-                    "<li>Worked as a Full Stack freelancer to build a website</li>" + 
-                    "<li>Designed and developed the website's front end using HTML5, CSS3, and JavaScript.</li>" +
-                    "<li>Used Ruby on Rails Web Application Development Framework for backend</li>" +
-                    "<li>Used PostgresSQL as the Database.</li>" +
-                    "</ul>"
-  }];
+    "resposibity" : `<ul>
+                    <li>Worked as a Full Stack freelancer to build a website</li>
+                    <li>Designed and developed the website's front end using HTML5, CSS3, and JavaScript.</li>
+                    <li>Used Ruby on Rails Web Application Development Framework for backend</li>
+                    <li>Used PostgresSQL as the Database.</li>
+                    </ul>`
+  }
+];
 
   constructor(private animation: CustomAnimationService) { }
 
