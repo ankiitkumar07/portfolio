@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-modal',
@@ -8,9 +8,9 @@ import { FormControl } from '@angular/forms';
 })
 export class ModalComponent implements OnInit {
 
-	email=  new FormControl('');
-	name = new FormControl('');
-	message = new FormControl('');
+	email=  new UntypedFormControl('');
+	name = new UntypedFormControl('');
+	message = new UntypedFormControl('');
 
   constructor() { }
 

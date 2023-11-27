@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ChartsModule } from 'ng2-charts';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ReactiveFormsModule, FormsModule, FormControl } from '@angular/forms'; 
+import { ReactiveFormsModule, FormsModule, UntypedFormControl } from '@angular/forms'; 
  
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -39,7 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HobbiesComponent,
     ModalComponent
   ],
-  providers: [FormControl],
+  providers: [UntypedFormControl],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
