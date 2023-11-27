@@ -1,24 +1,67 @@
-<p class="text-center">Have a new project? Want to hire me? Or just want to chat!! <br /><span>Drop me a message with a Hi, and I will reach back to you!</span></p>
+<div mat-dialog-title>
+    <h2 class="text-center">Contact Me!</h2>
+</div>
+
+
+
+<p class="text-center">
+    Have a new project? Want to hire me? Or just want to chat!!
+    <br>
+    <span>
+        Drop me a message with a Hi, and I will reach back to you!
+    </span>
+</p>
+
+
 
 <div class="container">
-	<div class="row justify-content-center">
-		<div class="col-8">
-			<form action="submit">
-			  <div class="form-group">
-			    <!-- <label for="email">Email</label> -->
-			    <input type="email" class="form-control" [formControl]="email" id="email" aria-describedby="emailHelp" placeholder="Email">
-			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-			  </div>
-			  <div class="form-group">
-			    <!-- <label for="name">Name</label> -->
-			    <input type="text" class="form-control" [formControl]="name" id="name" placeholder="What should I call you?">
-			  </div>
-			  <div class="form-group">
-			    <!-- <label for="message">Message</label> -->
-			    <textarea class="form-control" [formControl]="message" id="message" rows="3" placeholder="Let's disscuss work"></textarea>
-			  </div>
-			  <button class="btn btn-primary" (click)="sendDetails()">Submit</button>
-			</form>
-		</div>
-	</div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form action="submit">
+                <div class="form-group">
+                    <!-- <label for="email">Email</label> -->
+                    <input
+                        type="email"
+                        class="form-control"
+                        [formControl]="email"
+                        id="email"
+                        aria-describedby="emailHelp"
+                        placeholder="Email"
+                    >
+                    <small
+                        id="emailHelp"
+                        class="form-text text-muted"
+                    >
+                        We'll never share your email with anyone else.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <!-- <label for="name">Name</label> -->
+                    <input
+                        type="text"
+                        class="form-control"
+                        [formControl]="name"
+                        id="name"
+                        placeholder="What should I call you?"
+                    >
+                </div>
+                <div class="form-group">
+                    <!-- <label for="message">Message</label> -->
+                    <textarea
+                        class="form-control"
+                        [formControl]="message"
+                        id="message"
+                        rows="3"
+                        placeholder="Let's disscuss work"
+                    ></textarea>
+                </div>
+                <button
+                    class="btn btn-primary"
+                    (click)="sendDetails()"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
 </div>

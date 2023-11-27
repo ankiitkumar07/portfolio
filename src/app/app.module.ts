@@ -1,33 +1,41 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
 
-import { ChartsModule } from 'ng2-charts';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ReactiveFormsModule, FormsModule, UntypedFormControl } from '@angular/forms'; 
- 
-import { AppComponent } from './app.component';
-import { IntroComponent } from './intro/intro.component';
-import { ObjectiveComponent } from './objective/objective.component';
-import { QualificationsComponent } from './qualifications/qualifications.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { HobbiesComponent } from './hobbies/hobbies.component';
-import { ModalComponent } from './modal/modal.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgChartsModule } from "ng2-charts";
+import {
+  ReactiveFormsModule,
+  FormsModule,
+  UntypedFormControl,
+} from "@angular/forms";
+
+import { AppComponent } from "./app.component";
+import { IntroComponent } from "./intro/intro.component";
+import { ObjectiveComponent } from "./objective/objective.component";
+import { QualificationsComponent } from "./qualifications/qualifications.component";
+import { ExperienceComponent } from "./experience/experience.component";
+import { ProjectsComponent } from "./projects/projects.component";
+import { HobbiesComponent } from "./hobbies/hobbies.component";
+import { ModalComponent } from "./modal/modal.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { MaterialModule } from "./material.module";
+import { HttpClientModule } from "@angular/common/http";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ChartsModule,
-    ModalModule.forRoot(),
+    NgChartsModule,
     ReactiveFormsModule,
     FormsModule,
-    FontAwesomeModule
+    // FontAwesomeModule,
+    MaterialModule,
+    HttpClientModule,
+    CommonModule,
   ],
   declarations: [
     AppComponent,
@@ -37,9 +45,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ExperienceComponent,
     ProjectsComponent,
     HobbiesComponent,
-    ModalComponent
+    ModalComponent,
   ],
   providers: [UntypedFormControl],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
