@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { CustomAnimationService } from '../customAnimation';
+import { CustomAnimationService } from '../../customAnimation';
 
 @Component({
   selector: 'my-projects',

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { CustomAnimationService } from '../customAnimation';
+import { CustomAnimationService } from '../../customAnimation';
 
 
 @Component({

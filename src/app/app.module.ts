@@ -12,14 +12,7 @@ import {
 } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { IntroComponent } from "./intro/intro.component";
-import { ObjectiveComponent } from "./objective/objective.component";
-import { QualificationsComponent } from "./qualifications/qualifications.component";
-import { ExperienceComponent } from "./experience/experience.component";
-import { ProjectsComponent } from "./projects/projects.component";
-import { HobbiesComponent } from "./hobbies/hobbies.component";
 import { ModalComponent } from "./modal/modal.component";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { MaterialModule } from "./material.module";
 import { HttpClientModule } from "@angular/common/http";
 import { CommonModule } from "@angular/common";
@@ -37,16 +30,7 @@ import { CommonModule } from "@angular/common";
     HttpClientModule,
     CommonModule,
   ],
-  declarations: [
-    AppComponent,
-    IntroComponent,
-    ObjectiveComponent,
-    QualificationsComponent,
-    ExperienceComponent,
-    ProjectsComponent,
-    HobbiesComponent,
-    ModalComponent,
-  ],
+  declarations: [AppComponent, ModalComponent],
   providers: [UntypedFormControl],
   bootstrap: [AppComponent],
 })

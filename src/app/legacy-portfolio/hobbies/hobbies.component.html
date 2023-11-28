@@ -5,7 +5,7 @@
         <h1 class="display-4" #heading>Interest</h1>
       </div>
       <div class="col-12">
-      	<div class="ibox" *ngFor="let item of interests" [ngStyle]="{'background-image' : 'url('+item.image+')'}">
+      	<div class="ibox" *ngFor="let item of interests" [style]="{'background-image' : 'url('+item.image+')'}">
       		<h1>{{item.title}}<span>{{item.subTitle}}</span></h1>
       	</div>
       </div>

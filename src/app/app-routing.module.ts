@@ -1,25 +1,31 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { ExperienceComponent } from './experience/experience.component';
-import { IntroComponent } from './intro/intro.component';
-import { ObjectiveComponent } from './objective/objective.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { HobbiesComponent } from './hobbies/hobbies.component';
-import { QualificationsComponent } from './qualifications/qualifications.component';
-
+import { ResumeModule } from "./resume/resume.module";
+import { LegacyPortfolioModule } from "./legacy-portfolio/legacy-portfolio.module";
 
 const routes: Routes = [
-	{ path: '', component: IntroComponent, data: { animation: 'zoomOut'} },
-	{ path: 'skills', component: ObjectiveComponent, data: { animation: 'slideUp' }},
-	{ path: 'experience', component: ExperienceComponent, data: { animation: 'slideDown' } },
-	// { path: 'education', component: QualificationsComponent, data: { animation: 'slideLeft' } },
-	{ path: 'projects', component: ProjectsComponent, data: { animation: 'slideRight' } },
-	{ path: 'hobbies', component: HobbiesComponent, data: { animation: 'fadeOut' } }
+  {
+    path: "legacy-portfolio",
+    loadChildren: () =>
+      import("./legacy-portfolio/legacy-portfolio.module").then(
+        (m) => m.LegacyPortfolioModule
+      ),
+  },
+  {
+    path: "resume",
+    loadChildren: () =>
+      import("./resume/resume.module").then((m) => m.ResumeModule),
+  },
+  {
+    path: "",
+    redirectTo: "/legacy-portfolio",
+    pathMatch: "full",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {})],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
