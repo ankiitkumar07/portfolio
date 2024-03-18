@@ -13,13 +13,11 @@ const routes: Routes = [
   {
     path: "",
     component: LegacyPortfolioComponent,
-    // outlet: 'legacy-outlet',
     children: [
       // {
       //   path: "",
-      //   redirectTo: "intro",
+      //   redirectTo: "/legacy-portfolio/intro",
       //   pathMatch: "full",
-      //   outlet: 'legacy-outlet'
       // },
       {
         path: "intro",

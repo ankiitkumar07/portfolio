@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "/legacy-portfolio",
+    redirectTo: "/legacy-portfolio/intro",
     pathMatch: "full",
   },
 ];
